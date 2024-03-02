@@ -40,6 +40,7 @@ const firebaseConfig = {
     if(!userSnapShot.exists()){
         const{displayName, email} = userAuth;
         const createdAt = new Date();
+        
         try{
             await setDoc(userDocRef, {
                 displayName,
@@ -52,4 +53,4 @@ const firebaseConfig = {
         }
     }
     return userDocRef;
-  }
+  };
